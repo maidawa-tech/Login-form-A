@@ -1,0 +1,101 @@
+:root {
+    --primary-color: #4e73df;
+    --primary-hover: #3a5ec0;
+}
+
+body {
+    background-color: #e0e0eb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.min-vh-100 {
+    min-height: 100vh;
+}
+
+.card {
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.card.shadow-lg {
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divider {
+    position: relative;
+    margin: 1.5rem 0;
+}
+
+.divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #e0e0e0;
+    z-index: -1;
+}
+
+.divider::after {
+    content: attr(data-content);
+    display: inline-block;
+    background-color: #fff;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.input-group-text {
+    background-color: #f8f9fa;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(78, 115, 223, 0.25);
+    border-color: var(--primary-color);
+}
+.custom-border {
+  border: 1px solid #707070; 
+}
+
+/* Animation for form */
+.card {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .card-body {
+        padding: 1.5rem;
+    }
+}
